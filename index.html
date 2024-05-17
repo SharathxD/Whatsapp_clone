@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style_leftpanel.css" />
+  <link rel="stylesheet" href="./style_rightpanel.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style_cont_details.css" />
+  <link rel="icon" type="image/x-icon" href="./Favicon/favicon.png">
+  <title>WhatsApp</title>
+  <script defer src="./db.js"></script>
+  <script defer src="./script.js"></script>
+  <!--Specific Meta Data-->
+</head>
+<body>
+
+  <div class="root_container">
+    
+    <div id="show_cont_details" class="show_cont_details" 
+    onclick="close_display(this)">
+      <div id="show_cd_data" class="show_cd_data">
+        <img class="show_cd_data_img" 
+        src="./Images/contact_dp_images/cont_dp_oikawa.jpg" />
+        <h2>OIKAWA</h2>
+        <img class="show_cd_data_symbol"
+        src="https://img.icons8.com/material/100/multiply--v1.png" />
+      </div>
+      <div class="show_cd_img_container">
+        <img id="show_cd_img" class="show_cd_img"
+        src="./Images/contact_dp_images/cont_dp_oikawa.jpg" />
+      </div>
+    </div>
+
+    <div class="left_panel">
+      <div class="lp_header">
+        <img onclick="display_cont(this, true)" class="lp_profile_dp" 
+        src="./Images/profile_dp.jpg" alt="" />
+        <div class="lp_header_icons">
+          <img class="lp_icon" src="https://img.icons8.com/material/100/conference-call--v2.png" alt="" />
+          <img class="lp_icon" src="https://img.icons8.com/ios-filled/100/loading.png" alt="" />
+          <img class="lp_icon" src="https://img.icons8.com/material/100/filled-speech-bubble-with-dots.png" alt="" />
+          <img class="lp_icon" src="https://img.icons8.com/ios-glyphs/100/menu-2.png" alt="" />          
+      </div>
+      </div>
+      <div class="lp_input_field">
+        <img class="lp_search_icon" 
+        src="https://img.icons8.com/ios-filled/100/search--v1.png" alt="" />
+        <input id="srh_input" placeholder="Search or start a new chat" 
+        type="text" class="lp_srh_input"
+        onpaste= "srh_by_query(this)" oninput="srh_by_query(this)"/>
+        <img title="Ascending / Descending" 
+        onclick="ascend_cont_list()" class="lp_filter_icon" 
+        src="https://img.icons8.com/material/100/horizontal-settings-mixer--v1.png" alt="" />
+      </div>
+      <div id="lp_contact_lists" class="lp_hero_section">
+      </div>
+      
+    </div>
+
+    <div class="right_panel">
+      <div class="right_panel_header">
+        <img id="rp_header_img" class="rp_cont_dp" 
+        onclick="display_cont(this)" alt=""
+        src="./Images/contact_dp_images/cont_dp_oikawa.jpg" />
+        <h3 id="rp_header_cont_name"></h3>
+        <div class="rp_icon_place_holder">
+          <img src="https://img.icons8.com/ios-filled/100/search--v1.png" 
+          class="rp_header_icon" alt="" />
+          <img src="https://img.icons8.com/ios-glyphs/100/menu-2.png" 
+          class="rp_header_icon" alt="" />
+        </div>
+      </div>
+      <div id="rp_hero" class="right_panel_hero_section">
+      </div>
+      <div class="right_panel_message_input">
+        <img class="rp_msg_icon" 
+        src="https://img.icons8.com/material/100/plus-math--v2.png" alt="" />
+        <form id="rp_msg_form">
+        <input id="rp_text_input" class="rp_text_input" 
+        placeholder="Type a message" type="text" />
+        <input style="display: none;" type="submit"/>
+        <img class="rp_msg_icon" 
+        src="https://img.icons8.com/material-outlined/100/happy--v1.png" alt="" />
+        <input class="rp_msg_icon" type="image"
+        src="https://img.icons8.com/material/100/sent--v1.png" alt="" />
+        </form>
+      </div>
+      
+    </div>
+
+  </div>
+    
+</body>
+</html>
